@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nguyễn Xuân Hưng - Frontend Developer với hơn 7 năm kinh nghiệm phát triển web">
+    <meta name="keywords" content="Frontend Developer, React, JavaScript, HTML, CSS, Web Developer">
+    <title>Nguyễn Xuân Hưng | Frontend Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <span class="loader-text">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-text">NXH</span>
+                <span class="logo-dot"></span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Trang chủ</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">Giới thiệu</a></li>
+                <li class="nav-item"><a href="#experience" class="nav-link">Kinh nghiệm</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Kỹ năng</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Dự án</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Liên hệ</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-particles" id="particles"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Sẵn sàng cho các dự án mới</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-greeting">Xin chào, tôi là</span>
+                    <span class="title-name">Nguyễn Xuân Hưng</span>
+                    <span class="title-role">
+                        <span class="role-prefix">I'm a</span>
+                        <span class="role-text" id="typed-text"></span>
+                        <span class="role-cursor">|</span>
+                    </span>
+                </h1>
+                <p class="hero-description">
+                    Frontend Developer với hơn <strong>7+ năm kinh nghiệm</strong> trong việc xây dựng các ứng dụng web
+                    hiện đại,
+                    tối ưu hiệu suất và thiết kế giao diện người dùng đẹp mắt.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>Xem dự án</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Liên hệ ngay</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="7">0</span>
+                        <span class="stat-plus">+</span>
+                        <span class="stat-label">Năm kinh nghiệm</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="30">0</span>
+                        <span class="stat-plus">+</span>
+                        <span class="stat-label">Dự án hoàn thành</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="4">0</span>
+                        <span class="stat-plus">+</span>
+                        <span class="stat-label">Công ty đã làm</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="visual-card">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="avatar-wrapper">
+                            <div class="avatar-ring"></div>
+                            <div class="avatar">
+                                <i class="fas fa-user-astronaut"></i>
+                            </div>
+                        </div>
+                        <div class="tech-orbit">
+                            <div class="orbit-ring orbit-1"></div>
+                            <div class="orbit-ring orbit-2"></div>
+                            <div class="orbit-ring orbit-3"></div>
+                            <div class="orbit-icon orbit-icon-1"><i class="fab fa-react"></i></div>
+                            <div class="orbit-icon orbit-icon-2"><i class="fab fa-js"></i></div>
+                            <div class="orbit-icon orbit-icon-3"><i class="fab fa-html5"></i></div>
+                            <div class="orbit-icon orbit-icon-4"><i class="fab fa-css3-alt"></i></div>
+                            <div class="orbit-icon orbit-icon-5"><i class="fab fa-angular"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+            <span>Cuộn xuống</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Về tôi</span>
+                <h2 class="section-title">Đam mê tạo ra những <span class="highlight">trải nghiệm số</span> tuyệt vời
+                </h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="about-intro">
+                        <div class="intro-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="intro-text">
+                            Frontend Software Engineer với 7 năm kinh nghiệm. Chuyên về JavaScript/TypeScript,
+                            ReactJS và VueJS. Thành thạo các UI Frameworks: Bootstrap, Tailwind, Material UI,
+                            Element UI, Ant Design. Luôn hướng tới việc viết code sạch và có khả năng mở rộng.
+                        </p>
+                    </div>
+                    <div class="about-details">
+                        <div class="detail-card">
+                            <div class="detail-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Học vấn</h4>
+                                <p>Học Viện Kỹ Thuật Quân Sự</p>
+                                <span>2012 - 2018 | Công nghệ Thông tin</span>
+                            </div>
+                        </div>
+                        <div class="detail-card">
+                            <div class="detail-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Địa điểm</h4>
+                                <p>Hà Nội, Việt Nam</p>
+                                <span>Sẵn sàng làm việc remote</span>
+                            </div>
+                        </div>
+                        <div class="detail-card">
+                            <div class="detail-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Sở thích</h4>
+                                <p>Du lịch, Âm nhạc</p>
+                                <span>Games: AOE, LOL, Billiard</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-frame">
+                        <div class="frame-decoration"></div>
+                        <div class="profile-placeholder">
+                            <div class="code-window">
+                                <div class="window-header">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <div class="code-content">
+                                    <pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
+  <span class="property">name</span>: <span class="string">"Nguyễn Xuân Hưng"</span>,
+  <span class="property">role</span>: <span class="string">"Frontend Developer"</span>,
+  <span class="property">experience</span>: <span class="number">7</span>,
+  <span class="property">passion</span>: <span class="string">"Building UIs"</span>,
+  <span class="property">available</span>: <span class="boolean">true</span>
+};</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience section" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Kinh nghiệm</span>
+                <h2 class="section-title">Hành trình <span class="highlight">chuyên nghiệp</span> của tôi</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">05/2021 - Hiện tại</span>
+                            <span class="timeline-status current">Đang làm việc</span>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="card-header">
+                                <div class="company-logo">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <div class="company-info">
+                                    <h3>CMC GLOBAL</h3>
+                                    <span class="position">Frontend Developer</span>
+                                </div>
+                            </div>
+                            <ul class="timeline-tasks">
+                                <li><i class="fas fa-check"></i> Phát triển hệ thống quản lý RTS cho CMC</li>
+                                <li><i class="fas fa-check"></i> Xây dựng CRM tích hợp SAP với Jira features</li>
+                                <li><i class="fas fa-check"></i> Phát triển Lego Cloud Platform (Infra) cho khách hàng
+                                    Hàn Quốc</li>
+                                <li><i class="fas fa-check"></i> Làm việc với ReactJS, VueJS và TypeScript</li>
+                            </ul>
+                            <div class="timeline-tech">
+                                <span class="tech-tag">ReactJS</span>
+                                <span class="tech-tag">VueJS</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Ant Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">05/2020 - 05/2021</span>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="card-header">
+                                <div class="company-logo">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <div class="company-info">
+                                    <h3>CITIGO</h3>
+                                    <span class="position">Frontend Developer</span>
+                                </div>
+                            </div>
+                            <ul class="timeline-tasks">
+                                <li><i class="fas fa-check"></i> Phát triển giao diện cho hệ thống KiotViet</li>
+                                <li><i class="fas fa-check"></i> Xây dựng module Auth, Products, Cart, Payment</li>
+                                <li><i class="fas fa-check"></i> Tối ưu hiệu suất và trải nghiệm người dùng</li>
+                            </ul>
+                            <div class="timeline-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">SCSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">01/2019 - 04/2020</span>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="card-header">
+                                <div class="company-logo">
+                                    <i class="fas fa-sun"></i>
+                                </div>
+                                <div class="company-info">
+                                    <h3>Sun Asterisk</h3>
+                                    <span class="position">Frontend Developer</span>
+                                </div>
+                            </div>
+                            <ul class="timeline-tasks">
+                                <li><i class="fas fa-check"></i> Phát triển nền tảng giao dịch UberOption cho khách hàng
+                                    Hàn Quốc</li>
+                                <li><i class="fas fa-check"></i> Xây dựng giao diện với ReactJS và NodeJS</li>
+                                <li><i class="fas fa-check"></i> Nghiên cứu và áp dụng công nghệ mới</li>
+                            </ul>
+                            <div class="timeline-tech">
+                                <span class="tech-tag">ReactJS</span>
+                                <span class="tech-tag">NodeJS</span>
+                                <span class="tech-tag">SCSS</span>
+                                <span class="tech-tag">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">06/2016 - 12/2018</span>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="card-header">
+                                <div class="company-logo">
+                                    <i class="fas fa-gamepad"></i>
+                                </div>
+                                <div class="company-info">
+                                    <h3>APPOTA</h3>
+                                    <span class="position">Frontend Developer</span>
+                                </div>
+                            </div>
+                            <ul class="timeline-tasks">
+                                <li><i class="fas fa-check"></i> Phát triển marketing campaigns và game portals</li>
+                                <li><i class="fas fa-check"></i> Xây dựng website tương tác và landing pages</li>
+                                <li><i class="fas fa-check"></i> Phát triển hệ thống giftcode và app mini-games</li>
+                                <li><i class="fas fa-check"></i> Làm việc với JavaScript, WordPress, PHP</li>
+                            </ul>
+                            <div class="timeline-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">WordPress</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Kỹ năng</span>
+                <h2 class="section-title">Công nghệ & <span class="highlight">Công cụ</span> tôi sử dụng</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Coding</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-js"></i></div>
+                            <span>JavaScript / TypeScript</span>
+                            <div class="skill-level" data-level="90"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-react"></i></div>
+                            <span>ReactJS</span>
+                            <div class="skill-level" data-level="88"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-vuejs"></i></div>
+                            <span>VueJS</span>
+                            <div class="skill-level" data-level="85"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                            <span>HTML5 / CSS3 / SCSS</span>
+                            <div class="skill-level" data-level="95"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+                            <span>NodeJS / WordPress</span>
+                            <div class="skill-level" data-level="75"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-layer-group"></i></div>
+                            <span>Ant Design / Tailwind / Bootstrap</span>
+                            <div class="skill-level" data-level="90"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>Design Tools</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-figma"></i></div>
+                            <span>Figma</span>
+                            <div class="skill-level" data-level="85"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-palette"></i></div>
+                            <span>Adobe XD</span>
+                            <div class="skill-level" data-level="80"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-image"></i></div>
+                            <span>Photoshop</span>
+                            <div class="skill-level" data-level="85"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-bezier-curve"></i></div>
+                            <span>Illustrator</span>
+                            <div class="skill-level" data-level="70"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-vector-square"></i></div>
+                            <span>Sketch</span>
+                            <div class="skill-level" data-level="75"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <h3>Management</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                            <span>Git / GitHub</span>
+                            <div class="skill-level" data-level="90"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-columns"></i></div>
+                            <span>Agile / Scrum</span>
+                            <div class="skill-level" data-level="85"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-clipboard-list"></i></div>
+                            <span>Redmine</span>
+                            <div class="skill-level" data-level="80"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Dự án</span>
+                <h2 class="section-title">Một số <span class="highlight">dự án nổi bật</span></h2>
+            </div>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">Tất cả</button>
+                <button class="filter-btn" data-filter="enterprise">Enterprise</button>
+                <button class="filter-btn" data-filter="web">Website</button>
+                <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="enterprise">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="overlay-icons">
+                                <a href="https://hypernext-infinity.online:8099/" target="_blank" class="overlay-icon"
+                                    title="Xem trực tiếp">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-fire-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-company">CMC Global</span>
+                            <span class="project-date">2025 - Hiện tại</span>
+                        </div>
+                        <h3 class="project-title"><a href="https://hypernext-infinity.online:8099/"
+                                target="_blank">Phoenix - Enterprise System <i class="fas fa-external-link-alt"></i></a>
+                        </h3>
+                        <p class="project-description">
+                            Hệ thống quản lý doanh nghiệp với dashboard, quản lý nguồn lực và báo cáo.
+                        </p>
+                        <div class="project-tech">
+                            <span>ReactJS</span>
+                            <span>Ant Design</span>
+                            <span>TypeScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="mobile">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="overlay-icons">
+                                <a href="https://expo.dev/accounts/nxhung/projects/AssistApp/builds/a59bf964-68f1-48f1-88bb-ee596868e93e"
+                                    target="_blank" class="overlay-icon" title="Xem trên Expo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-company">CMC Global</span>
+                            <span class="project-date">2025 - Hiện tại</span>
+                        </div>
+                        <h3 class="project-title"><a
+                                href="https://expo.dev/accounts/nxhung/projects/AssistApp/builds/a59bf964-68f1-48f1-88bb-ee596868e93e"
+                                target="_blank">AssistApp - Mobile App <i class="fas fa-external-link-alt"></i></a></h3>
+                        <p class="project-description">
+                            Ứng dụng mobile hỗ trợ quản lý công việc, xây dựng với React Native và Expo.
+                        </p>
+                        <div class="project-tech">
+                            <span>React Native</span>
+                            <span>Expo</span>
+                            <span>TypeScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="enterprise">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="overlay-icons">
+                                <a href="#" class="overlay-icon" title="Dự án nội bộ">
+                                    <i class="fas fa-lock"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-company">CMC Global</span>
+                            <span class="project-date">04/2024 - 12/2025</span>
+                        </div>
+                        <h3 class="project-title">RTS - CMC Management System <span class="badge-internal"><i
+                                    class="fas fa-lock"></i> Internal</span></h3>
+                        <p class="project-description">
+                            Hệ thống quản lý ứng viên và CV cho CMC, xây dựng dựa trên Figma UI design.
+                        </p>
+                        <div class="project-tech">
+                            <span>VueJS</span>
+                            <span>TypeScript</span>
+                            <span>Element UI</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="enterprise">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="overlay-icons">
+                                <a href="#" class="overlay-icon" title="Dự án nội bộ">
+                                    <i class="fas fa-lock"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-company">CMC Global</span>
+                            <span class="project-date">01/2024 - 04/2024</span>
+                        </div>
+                        <h3 class="project-title">CRM - SAP Integration <span class="badge-internal"><i
+                                    class="fas fa-lock"></i> Internal</span></h3>
+                        <p class="project-description">
+                            Tích hợp Jira features và quản lý năng suất với hệ thống SAP.
+                        </p>
+                        <div class="project-tech">
+                            <span>ReactJS</span>
+                            <span>TypeScript</span>
+                            <span>Ant Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="enterprise">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="overlay-icons">
+                                <a href="#" class="overlay-icon" title="Dự án nội bộ">
+                                    <i class="fas fa-lock"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-company">CMC Global</span>
+                            <span class="project-date">05/2021 - 12/2023</span>
+                        </div>
+                        <h3 class="project-title">Infra - Lego Cloud Platform <span class="badge-internal"><i
+                                    class="fas fa-lock"></i> Internal</span></h3>
+                        <p class="project-description">
+                            Nền tảng quản lý cloud infrastructure và tài khoản cho khách hàng Lego (Hàn Quốc).
+                        </p>
+                        <div class="project-tech">
+                            <span>ReactJS</span>
+                            <span>VueJS</span>
+                            <span>Tailwind UI</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="overlay-icons">
+                                <a href="https://metaf-global-new-web-8im4.vercel.app" target="_blank"
+                                    class="overlay-icon" title="Xem trực tiếp">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-horse"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-company">CMC Global</span>
+                            <span class="project-date">04/2024 - 12/2024</span>
+                        </div>
+                        <h3 class="project-title"><a href="https://metaf-global-new-web-8im4.vercel.app"
+                                target="_blank">Metaf Global - Horse Racing <i class="fas fa-external-link-alt"></i></a>
+                        </h3>
+                        <p class="project-description">
+                            Game đua ngựa với tiền ảo + quản lý Jira. Phát triển UI dựa trên Figma cho khách hàng Hàn
+                            Quốc.
+                        </p>
+                        <div class="project-tech">
+                            <span>ReactJS</span>
+                            <span>NextJS</span>
+                            <span>TypeScript</span>
+                            <span>Ant Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="overlay-icons">
+                                <a href="https://e-learn.com.vn/" target="_blank" class="overlay-icon"
+                                    title="Xem trực tiếp">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-company">Sun Asterisk</span>
+                            <span class="project-date">2019 - 2020</span>
+                        </div>
+                        <h3 class="project-title"><a href="https://e-learn.com.vn/" target="_blank">Web E-Learn <i
+                                    class="fas fa-external-link-alt"></i></a></h3>
+                        <p class="project-description">
+                            Nền tảng bán khóa học tiếng Anh online cho trẻ em với hệ thống đánh giá và theo dõi tiến độ.
+                        </p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>HTML</span>
+                            <span>SCSS</span>
+                            <span>Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="overlay-icons">
+                                <a href="https://congtruyen.org" target="_blank" class="overlay-icon"
+                                    title="Xem trực tiếp">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-company">Appota</span>
+                            <span class="project-date">2017 - 2018</span>
+                        </div>
+                        <h3 class="project-title"><a href="https://congtruyen.org" target="_blank">Congtruyen.org <i
+                                    class="fas fa-external-link-alt"></i></a></h3>
+                        <p class="project-description">
+                            Website đọc truyện online với hệ thống tài khoản, thông báo, nạp/rút tiền và quảng cáo.
+                        </p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>WordPress</span>
+                            <span>LESS</span>
+                            <span>Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ecommerce">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="overlay-icons">
+                                <a href="https://kiotviet.vn" target="_blank" class="overlay-icon"
+                                    title="Xem trực tiếp">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-store"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-company">Citigo</span>
+                            <span class="project-date">04/2020 - 06/2020</span>
+                        </div>
+                        <h3 class="project-title"><a href="https://kiotviet.vn" target="_blank">KiotViet <i
+                                    class="fas fa-external-link-alt"></i></a></h3>
+                        <p class="project-description">
+                            Giải pháp quản lý bán hàng toàn diện: Auth, Products, Cart, Payment modules.
+                        </p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>SCSS</span>
+                            <span>Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="overlay-icons">
+                                <a href="#" class="overlay-icon" title="Xem trực tiếp">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-company">Sun Asterisk</span>
+                            <span class="project-date">01/2019 - 03/2020</span>
+                        </div>
+                        <h3 class="project-title"><a href="https://uberoption.com" target="_blank">UberOption Trading
+                                Platform <i class="fas fa-external-link-alt"></i></a></h3>
+                        <p class="project-description">
+                            Nền tảng giao dịch binary options cho khách hàng Hàn Quốc với giao diện trực quan.
+                        </p>
+                        <div class="project-tech">
+                            <span>ReactJS</span>
+                            <span>NodeJS</span>
+                            <span>Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="overlay-icons">
+                                <a href="https://vi.appota.com" target="_blank" class="overlay-icon"
+                                    title="Xem trực tiếp">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-company">Appota</span>
+                            <span class="project-date">06/2016 - 12/2018</span>
+                        </div>
+                        <h3 class="project-title"><a href="https://vi.appota.com" target="_blank">Game Marketing &
+                                Portals <i class="fas fa-external-link-alt"></i></a></h3>
+                        <p class="project-description">
+                            Marketing campaigns, giftcodes system, app mini-games và game landing pages.
+                        </p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>WordPress</span>
+                            <span>PHP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Liên hệ</span>
+                <h2 class="section-title">Hãy <span class="highlight">kết nối</span> với tôi</h2>
+                <p class="section-subtitle">
+                    Bạn có dự án muốn hợp tác hoặc cần tư vấn? Hãy liên hệ với tôi ngay!
+                </p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <a href="mailto:nguyenxuanhung16041993@gmail.com">nguyenxuanhung16041993@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Điện thoại</h4>
+                            <a href="tel:0379123868">0379 123 868</a>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Địa chỉ</h4>
+                            <span>Hà Nội, Việt Nam</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/nguyenhung1993" target="_blank" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <input type="text" id="name" name="name" required>
+                                <label for="name">Họ và tên</label>
+                                <span class="focus-border"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <input type="email" id="email" name="email" required>
+                                <label for="email">Email</label>
+                                <span class="focus-border"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <input type="text" id="subject" name="subject" required>
+                                <label for="subject">Tiêu đề</label>
+                                <span class="focus-border"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-wrapper textarea-wrapper">
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                                <label for="message">Nội dung</label>
+                                <span class="focus-border"></span>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Gửi tin nhắn</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">NXH</span>
+                    <span class="logo-dot"></span>
+                </div>
+                <p class="footer-text">
+                    Thiết kế và xây dựng với <i class="fas fa-heart"></i> bởi Nguyễn Xuân Hưng
+                </p>
+                <p class="footer-copyright">
+                    &copy; 2024 All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" title="Về đầu trang">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
